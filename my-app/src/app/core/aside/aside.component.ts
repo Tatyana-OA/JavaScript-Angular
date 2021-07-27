@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, TemplateRef } from '@angular/core';
 import { IPost } from 'src/app/shared/interfaces';
 
 @Component({
@@ -10,6 +10,7 @@ export class AsideComponent{
 
 	@Input() title!: string;
 	@Input() items: IPost[] | undefined;
+	@Input() itemTemplateRef!: TemplateRef<{ $implicit: {} }>
   constructor() { }
 
 
